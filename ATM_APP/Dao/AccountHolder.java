@@ -20,8 +20,9 @@ public class AccountHolder implements Runnable {
             }
         }
     }
+    //private void makeWithdrawal(int withdrawAmount){---} without synchronized word it gives you race condition try removing synchronized word
 
-    private void makeWithdrawal(int withdrawAmount) {
+    private synchronized void makeWithdrawal(int withdrawAmount) {
         if(account.getBalance() >= withdrawAmount){
             System.out.println(Thread.currentThread().getName()  + " is going to withdraw $"+withdrawAmount);
             try{
