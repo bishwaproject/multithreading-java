@@ -10,6 +10,8 @@
 * **Creating Threads**: in java, you can create threads by either **extending the Thread class** or **implementing the Runnable interface**. Implementing Runnable is generally preferred as it provides better separation of concerns.
 
 ##### Threads Creation Hands-On
+There are two ways to create thread in java.
+i) By Extending the Thread class [like below]
 ```java
 package multithreading.creatingthreads;
 
