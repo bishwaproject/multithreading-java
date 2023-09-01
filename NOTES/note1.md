@@ -39,3 +39,32 @@ public class ThreadExample {
 
 }
 ```
+And implementing Runnable
+```java
+package multithreading.creatingthreads;
+
+class RunnableExample implements Runnable{
+
+	@Override
+	public void run() {
+		for(int i = 0; i < 5; i++) {
+			System.out.println("Hello from runnable class " + i);
+		}
+		
+	}
+	
+}
+
+public class RunnableDemo {
+	public static void main(String[] args) {
+		RunnableExample re = new RunnableExample();
+		Thread th = new Thread(re);
+		
+		th.start();
+		for(int i = 0; i<5; i++) {
+			System.out.println("Hello from main thread " + i);
+		}
+	}
+
+}
+```
